@@ -31,14 +31,10 @@ var animateDVD=function(){
     else{
 	moveDown=false;
     }
-    //window.cancelAnimationFrame(requestID);
     var rect=function(){
 	clear();
-	//ctx.clearRect(0,0,500,500);
-	//ctx.beginPath();
 	var r=document.createElementNS("http://www.w3.org/2000/svg", "rect");
 	slate.appendChild(r);
-	//ctx.fillStyle="lightsteelblue"
 	if(x>=400){
 	    moveRight=false;
 	}
@@ -68,18 +64,14 @@ var animateDVD=function(){
 	r.setAttribute("width",100);
 	r.setAttribute("height",50);
 	r.setAttribute("fill","lightsteelblue");
-	//ctx.fillRect(x,y,100,50);
-	//requestID=window.requestAnimationFrame(rect);
     };
     timerId=setInterval(rect,10);
-    //rect();
 };
 
 var animateCircle=function(){
     var r=0;
     var tooBig=false;
     var tooSmall=false;
-    //window.cancelAnimationFrame(requestID);
     var circle=function(){
 	clear();
 	var c=document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -91,7 +83,6 @@ var animateCircle=function(){
 	    c.setAttribute("cx",250);
 	    c.setAttribute("cy",250);
 	    c.setAttribute("r",r);
-	    //ctx.arc(250,250,r,0,2*Math.PI);
 	    r++;
 	}
 	else{
@@ -99,21 +90,14 @@ var animateCircle=function(){
 	    c.setAttribute("cx",250);
 	    c.setAttribute("cy",250);
 	    c.setAttribute("r",r);
-	    //ctx.arc(250,250,r,0,2*Math.PI);
 	    if(r==0){
 		tooBig=false;
 	    }
 	}
-	//var c=document.createElementNS("http://www.w3.org/2000/svg", "circle");
-	//c.setAttribute("cx",250);
-	//c.setAttribute("cy",250);
-	//c.setAttribute("r",r);
 	c.setAttribute("fill","blue");
 	c.setAttribute("stroke","black");
-	//timerId=setInterval(circle,1000);
     };
     timerId=setInterval(circle,10);
-    //circle();
 };
 
 var clear=function(e){
